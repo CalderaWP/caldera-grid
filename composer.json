@@ -1,0 +1,18 @@
+{
+    "name": "calderawp/grid",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Josh Pollock",
+            "email": "josh@calderawp.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "calderawp\\calderaGrid\\": "src"
+        },
+        "files": ["react-wp-scripts.php"]
+    }
+}
