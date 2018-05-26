@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test default 1`] = `
+<div>
+  Nothing
+</div>
+`;
+
+exports[`Test with message  1`] = `
+<div>
+  Hi Roy
+</div>
+`;
