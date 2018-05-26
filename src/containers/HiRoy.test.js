@@ -1,5 +1,5 @@
 import React from 'react';
-import {HiRoy } from "./HiRoy";
+import {HiRoy} from "./HiRoy";
 import renderer from 'react-test-renderer';
 
 test('Test with message ', () => {
