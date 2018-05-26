@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Edit} from "./components/Thing/Edit";
-import {Display} from "./components/Thing/Display";
+import {HiRoy} from "./containers/HiRoy";
 
 class App extends Component {
 
@@ -32,19 +31,12 @@ class App extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
-                <div>
-                    <Edit
-                        onChange={this.changeThing}
-                        idAttr={'thing-chooser'}
-                        label={'Choose Thing'}
-                        value={this.state.thing}
-                    />
-                    <div>
-                        <Display
-                            thing={this.state.thing}
-                        />
-                    </div>
-                </div>
+                <HiRoy
+                    onChange={this.changeThing}
+                    idAttr={'thing-chooser'}
+                    label={'Choose Thing'}
+                    value={this.state.thing}
+                />
             </div>
 
         );

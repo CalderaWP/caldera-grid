@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test with message  1`] = `
+<div>
+  <div>
+    <label
+      htmlFor="thing-chooser"
+    >
+      Change Thing
+    </label>
+    <input
+      id="thing-chooser"
+      onChange={[Function]}
+      value="Hi Roy"
+    />
+  </div>
+  <div>
+    Hi Roy
+  </div>
+</div>
+`;
