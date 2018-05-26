@@ -1,4 +1,5 @@
 import React from 'react';
+import {displayPropTypes} from "./PropTypes";
 
 export const  Display = (props) => {
     const thing = undefined !== props.thing ? props.thing : 'Nothing';
@@ -6,3 +7,7 @@ export const  Display = (props) => {
         <div>{thing}</div>
     );
 };
+
+
+Display.propTypes = displayPropTypes;
+

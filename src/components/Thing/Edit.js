@@ -1,4 +1,5 @@
 import React from 'react';
+import {editPropTypes} from "./PropTypes";
 
 export const Edit = (props) => {
     return (
@@ -10,9 +11,13 @@ export const Edit = (props) => {
             </label>
             <input
                 id={props.idAttr}
-                value={props.value}
-                onChange={props.onChange}
+                value={props.thing}
+                onChange={(event) => {
+                    props.onChange(event.target.value);
+                }}
             />
         </div>
     );
 };
+
+Edit.propTypes = editPropTypes;

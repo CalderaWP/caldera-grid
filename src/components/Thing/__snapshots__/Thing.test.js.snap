@@ -15,13 +15,13 @@ exports[`Test with message  1`] = `
 exports[`Test with message  2`] = `
 <div>
   <label
-    htmlFor={undefined}
+    htmlFor="thing-chooser"
   >
-    Change THing
+    Change Thing
   </label>
   <input
-    id={undefined}
-    onChange={undefined}
+    id="thing-chooser"
+    onChange={[Function]}
     value="Hi Roy"
   />
 </div>
