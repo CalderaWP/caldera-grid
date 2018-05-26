@@ -11,3 +11,18 @@ exports[`Test with message  1`] = `
   Hi Roy
 </div>
 `;
+
+exports[`Test with message  2`] = `
+<div>
+  <label
+    htmlFor={undefined}
+  >
+    Change THing
+  </label>
+  <input
+    id={undefined}
+    onChange={undefined}
+    value="Hi Roy"
+  />
+</div>
+`;
