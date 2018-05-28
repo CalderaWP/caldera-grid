@@ -1,23 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {HiRoy} from "./containers/HiRoy";
+import { connect } from 'react-redux'
+import {getThing} from "./components/Thing/state/selectors";
+import {setThing} from "./components/Thing/state/actions";
+import {editPropTypes} from "./components/Thing/PropTypes";
 
-class App extends Component {
+export const App = (props) => {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            thing: 'Hi Roy'
-        }
-        this.changeThing = this.changeThing.bind(this);
-    }
-
-    changeThing(newValue) {
-        this.setState({thing: newValue})
-    }
-
-    render() {
         return (
             <div className="App">
                 <header className="App-header">
@@ -32,15 +23,41 @@ class App extends Component {
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
                 <HiRoy
-                    onChange={this.changeThing}
+                    onChange={(newValue) => {
+                        console.log(newValue);
+                        props.onChange(newValue);
+                    }}
                     idAttr={'thing-chooser'}
                     label={'Choose Thing'}
-                    value={this.state.thing}
+                    thing={props.thing}
                 />
             </div>
-
         );
-    }
-}
 
-export default App;
+};
+
+App.propTypes = {
+    onChange: editPropTypes.onChange,
+    thing:editPropTypes.thing
+};
+
+const mapStateToProps = (state) => {
+    return {
+        thing: getThing(state)
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onChange: (newValue) => {
+            dispatch(setThing(newValue))
+        }
+    }
+};
+
+
+
+export const AppWrapped = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);

@@ -4,10 +4,12 @@ export const intitalState = { thing: 'Hi Roy' };
 export const thingReducer = ( state = intitalState, action ) => {
     switch (action.type){
         case SET_THING :
+            console.log(action);
             return {
-                thing:action.newValue,
                 ...state,
-            }
+                thing:action.newValue
+            };
+        default:
+            return state;
     }
-    return state;
-}
+};
