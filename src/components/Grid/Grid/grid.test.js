@@ -8,6 +8,7 @@ test('Works with one row', () => {
             rows={
                 {
                     'r1': {
+                        mode: 'editMode',
                         uuid: 'r1',
                         columns: {
                             'c1': {
@@ -22,7 +23,9 @@ test('Works with one row', () => {
                     }
 
                 }
+
             }
+            mode={'editMode'}
             onUpdate={() =>{}}
 
         />
@@ -38,6 +41,7 @@ test('Works with two rows', () => {
                 {
                     'r1': {
                         uuid: 'r1',
+                        mode: 'editMode',
                         columns: {
                             'c1': {
                                 content: 'HiRoy',
@@ -51,6 +55,7 @@ test('Works with two rows', () => {
                     },
                     'r2': {
                         uuid: 'r2',
+                        mode: 'editMode',
                         columns: {
                             'c12': {
                                 content: 'HiRoy',
@@ -64,6 +69,7 @@ test('Works with two rows', () => {
                     }
                 }
             }
+
             onUpdate={() =>{}}
 
         />

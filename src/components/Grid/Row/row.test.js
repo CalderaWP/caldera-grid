@@ -15,6 +15,7 @@ describe( 'Rows work with columns',  () => {
 
                     }
                 }
+                mode={'editMode'}
                 onUpdate={() =>{}}
 
             />
@@ -38,6 +39,8 @@ describe( 'Rows work with columns',  () => {
                         }
                     }
                 }
+                mode={'editMode'}
+
                 onUpdate={() =>{}}
 
             />

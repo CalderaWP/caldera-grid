@@ -13,7 +13,7 @@ export const Row = (props) => {
                         key={columnId}
                         content={'Hi Roy'}
                         boxes={boxes}
-                        boxMode={'editMode'}
+                        boxMode={props.mode}
                         defaultMode={'editMode'}
                     />
                 )

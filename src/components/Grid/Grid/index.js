@@ -13,7 +13,7 @@ export const Grid = (props) => {
                         <Row
                             key={row.uuid}
                             columns={row.columns}
-
+                            mode={row.mode}
                         />
                     )
                 })
