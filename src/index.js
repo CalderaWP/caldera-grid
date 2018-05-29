@@ -11,7 +11,7 @@ import {thingReducer} from "./components/Thing/state/reducer";
 const store = createStore(thingReducer);
 store.subscribe( (a,b) => {
     console.log(a,b);
-})
+});
 ReactDOM.render(
     <Provider store={store}>
         <AppWrapped />

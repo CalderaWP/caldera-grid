@@ -34,13 +34,13 @@ describe( 'reducer', () => {
     it('should setRow', () => {
         const newValue = {
             content: 'HiRoy',
-            uuid: '15'
+            uuid: 'arms15'
         };
 
         const expectState = {
             rows : {}
         };
-        expectState.rows['15'] = newValue;
+        expectState.rows['arms15'] = newValue;
         const action = setRow(newValue);
         expect(gridReducer(gridInitialState, action)).toEqual(expectState);
     });

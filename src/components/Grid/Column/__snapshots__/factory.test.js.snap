@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prepares columns correctly Prepares a row of columns 1`] = `
+Object {
+  "boxMode": "editMode",
+  "columns": Object {
+    "c1": Object {
+      "boxes": Object {
+        "displayMode": <div>
+          HiRoy
+</div>,
+        "editMode": <div>
+          <input
+                    type="text"
+                    value="HiRoy"
+          />
+</div>,
+      },
+      "content": "HiRoy",
+      "uuid": "c1",
+    },
+    "c2": Object {
+      "boxes": Object {
+        "displayMode": <div>
+          HiMike
+</div>,
+        "editMode": <div>
+          <input
+                    type="text"
+                    value="HiMike"
+          />
+</div>,
+      },
+      "content": "HiMike",
+      "uuid": "c2",
+    },
+  },
+  "defaultMode": "displayMode",
+  "mode": "editMode",
+}
+`;

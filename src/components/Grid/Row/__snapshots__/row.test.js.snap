@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rows work with columns Works with one column 1`] = `
+<div>
+  <div />
+</div>
+`;
+
+exports[`Rows work with columns Works with two columns 1`] = `
+<div>
+  <div />
+  <div />
+</div>
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Columns work with boxes Falls back to default correctly 1`] = `
+<div>
+  <div>
+    <input
+      type="text"
+      value="hi"
+    />
+  </div>
+</div>
+`;
+
+exports[`Columns work with boxes Falls back to default correctly 2`] = `
+<div>
+  <div>
+    <input
+      type="text"
+      value="hi"
+    />
+  </div>
+</div>
+`;
+
+exports[`Columns work with boxes Works with one box 1`] = `
+<div>
+  <div>
+    <input
+      type="text"
+      value="hi"
+    />
+  </div>
+</div>
+`;

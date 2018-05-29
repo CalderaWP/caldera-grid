@@ -7,13 +7,24 @@ test('Works with one row', () => {
         <Grid
             rows={
                 {
-                    1: {
-                        content: 'HiRoy',
-                        uuid: '1'
+                    'r1': {
+                        uuid: 'r1',
+                        columns: {
+                            'c1': {
+                                content: 'HiRoy',
+                                uuid: 'c1'
+                            },
+                            'c2': {
+                                content: 'HiMike',
+                                uuid: 'c2'
+                            }
+                        }
                     }
 
                 }
             }
+            onUpdate={() =>{}}
+
         />
     );
     let tree = component.toJSON();
@@ -25,16 +36,35 @@ test('Works with two rows', () => {
         <Grid
             rows={
                 {
-                    1: {
-                        content: 'HiRoy',
-                        uuid: '1'
+                    'r1': {
+                        uuid: 'r1',
+                        columns: {
+                            'c1': {
+                                content: 'HiRoy',
+                                uuid: 'c1'
+                            },
+                            'c2': {
+                                content: 'HiMike',
+                                uuid: 'c2'
+                            }
+                        }
                     },
-                    2: {
-                        content: 'HiMike',
-                        uuid: '2'
+                    'r2': {
+                        uuid: 'r2',
+                        columns: {
+                            'c12': {
+                                content: 'HiRoy',
+                                uuid: 'c12'
+                            },
+                            'c22': {
+                                content: 'HiMike',
+                                uuid: 'c22'
+                            }
+                        }
                     }
                 }
             }
+            onUpdate={() =>{}}
 
         />
 

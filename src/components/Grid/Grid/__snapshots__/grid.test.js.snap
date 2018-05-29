@@ -5,7 +5,8 @@ exports[`Works with one row 1`] = `
   className="calderaGrid"
 >
   <div>
-    HiRoy
+    <div />
+    <div />
   </div>
 </div>
 `;
@@ -15,10 +16,12 @@ exports[`Works with two rows 1`] = `
   className="calderaGrid"
 >
   <div>
-    HiRoy
+    <div />
+    <div />
   </div>
   <div>
-    HiMike
+    <div />
+    <div />
   </div>
 </div>
 `;

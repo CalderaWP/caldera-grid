@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onChange: (newValue) => {
+        update: (newValue) => {
             dispatch(setRow(newValue))
         }
     }

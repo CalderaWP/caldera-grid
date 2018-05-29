@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Outputs the right box Render the first box when asked for non-existent box and default box does not exist either 1`] = `
+<div>
+  <div>
+    <input
+      type="text"
+      value="hi"
+    />
+  </div>
+</div>
+`;
+
+exports[`Outputs the right box Renders the default box when asked for non-existent box  1`] = `
+<div>
+  <div>
+    <input
+      type="text"
+      value="hi"
+    />
+  </div>
+</div>
+`;
+
+exports[`Outputs the right box Renders the right existent box 1`] = `
+<div>
+  <div>
+    <input
+      type="text"
+      value="hi"
+    />
+  </div>
+</div>
+`;

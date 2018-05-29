@@ -1,10 +1,23 @@
 import React from 'react';
 import {rowPropTypes} from "./propTypes";
+import {Column} from "../Column/Column";
 
 export const Row = (props) => {
     return (
         <div>
-            {props.content}
+            {Object.keys(props.columns).map( (columnId) => {
+                const column = props.columns[columnId];
+                const boxes = {};
+                return(
+                    <Column
+                        key={columnId}
+                        content={'Hi Roy'}
+                        boxes={boxes}
+                        boxMode={'editMode'}
+                        defaultMode={'editMode'}
+                    />
+                )
+            })}
         </div>
     )
 
