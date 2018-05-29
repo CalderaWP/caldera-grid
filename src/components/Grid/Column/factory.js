@@ -13,11 +13,44 @@ export const prepareColumn = (column) => {
 
     return column;
 };
+
+/**
+ * Prepare mode of row
+ *
+ * @param {Object} row
+ * @returns {*}
+ */
+export const prepareRowMode = (row) => {
+    row.boxMode = row.hasOwnProperty('mode') ? row.mode : defaultMode;
+    return row;
+};
+
+
+/**
+ * Find row by row ID
+ * @param {Object} rows
+ * @param {String} rowId
+ * @returns {{}}
+ */
+export const findRow = (rows,rowId) => {
+    return rows.hasOwnProperty(rowId) ? rows[rowId] : {};
+};
+
+/**
+ *
+ * @param {Object}row
+ * @returns {*}
+ */
 export const prepareRow = (row) => {
-    Object.keys(row.columns).map( (columnId) => {
-        row.columns[columnId] = prepareColumn(row.columns[columnId])
-    });
-    row.boxMode = row.hasOwnProperty('mode' ) ? row.mode : defaultMode;
+    if( ! row.hasOwnProperty('columns' ) ){
+        row.columns = {};
+    }else{
+        Object.keys(row.columns).map( (columnId) => {
+            row.columns[columnId] = prepareColumn(row.columns[columnId])
+        });
+    }
+
+    prepareRowMode(row);
     row.defaultMode = defaultMode;
     return row;
 };

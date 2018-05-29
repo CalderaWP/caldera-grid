@@ -14,6 +14,7 @@ export const Grid = (props) => {
                             key={row.uuid}
                             columns={row.columns}
                             mode={row.mode}
+                            onUpdate={props.onRowUpdate}
                         />
                     )
                 })

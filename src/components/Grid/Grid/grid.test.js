@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import {Grid} from "./index";
+import {defaultMode} from "../Column/factory";
 
 test('Works with one row', () => {
     const component = renderer.create(
@@ -25,8 +26,8 @@ test('Works with one row', () => {
                 }
 
             }
-            mode={'editMode'}
-            onUpdate={() =>{}}
+            mode={defaultMode}
+            onRowUpdate={() =>{}}
 
         />
     );
@@ -68,9 +69,11 @@ test('Works with two rows', () => {
                         }
                     }
                 }
-            }
 
-            onUpdate={() =>{}}
+            }
+            mode={defaultMode}
+
+            onRowUpdate={() =>{}}
 
         />
 

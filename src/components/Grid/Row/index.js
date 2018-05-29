@@ -14,7 +14,7 @@ export const Row = (props) => {
                         content={'Hi Roy'}
                         boxes={boxes}
                         boxMode={props.mode}
-                        defaultMode={'editMode'}
+                        defaultMode={props.mode}
                     />
                 )
             })}
