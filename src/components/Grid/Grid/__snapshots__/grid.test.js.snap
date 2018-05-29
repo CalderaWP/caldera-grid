@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Works with one row 1`] = `
+<div
+  className="calderaGrid"
+>
+  <div>
+    HiRoy
+  </div>
+</div>
+`;
+
+exports[`Works with two rows 1`] = `
+<div
+  className="calderaGrid"
+>
+  <div>
+    HiRoy
+  </div>
+  <div>
+    HiMike
+  </div>
+</div>
+`;
