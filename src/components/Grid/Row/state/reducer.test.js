@@ -9,13 +9,18 @@ import {
     rowReducer
 } from "./reducer";
 
-
+import {defaultMode} from "../../Column/factory";
 
 
 describe( 'row reducer', () => {
     test('should return the initial state', function() {
         expect(rowReducer(undefined, {})).toEqual(rowReducerInitalState);
         expect(rowReducer(rowReducerInitalState, {})).toEqual(rowReducerInitalState);
+    });
+
+    test( 'default mode is used correctly', () => {
+        const state = rowReducer(undefined, {});
+        expect(state.mode).toEqual(defaultMode);
     });
 
     test( 'should update add columns to rows', function()  {
@@ -25,7 +30,8 @@ describe( 'row reducer', () => {
         };
 
         const expectState = {
-            columns : {}
+            columns : {},
+            mode: defaultMode
         };
         expectState.columns['15'] = newValue;
         const action = addRowColumn(newValue);
